@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+       // let quadrado = (x=5) => {
+       //     return x*x
+       // }
+
+     //   document.write(quadrado(3))
+
+      // let quadrado = x => { // caso seja passado apenas um parametro n é necessário uso de parenteses
+      //     return x*x
+      //  }
+
+        let quadrado = x => x*x  //quando n há um bloco de lógica e apena um return n é necessário chaves
+
+
+        let y = Math.random()*(100 - 1)
+        y=Math.floor(y)
+        console.log(y)
+        
+
+        document.write(quadrado(y) )
+
+        let parOuImpar = numero => numero %2 == 0 ? 'par' : 'impar' // return implicito com com operador ternário
+           
+        
+
+        document.write(parOuImpar(quadrado(y)))
+
+    </script>
+
+
+
+
+
+</body>
+</html>
