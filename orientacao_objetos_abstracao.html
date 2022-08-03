@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //modelo do objeto
+        class contaBancaria{
+            //agencia
+            //numeroConta
+            //saldo
+            //limite
+            constructor(){ //cria os objetos
+                this.agencia = 1075
+                this.numeroConta = 835172
+                this.saldo = 60
+                this.limite = 200 
+            }
+
+            depositar(valorDeposito){
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque){
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo(){
+                return this.saldo
+            }
+
+        }
+
+        let x = new contaBancaria() //new instancia um objeto baseado em uma classe
+        let y = new contaBancaria() //new instancia um objeto baseado em uma classe
+
+        console.log(x.consultarSaldo())
+        x.depositar(100)
+        console.log(x.consultarSaldo())
+        x.sacar(200)
+        console.log(x.consultarSaldo())
+
+
+
+
+        //um software de marcenaria
+        //cadeira e sofá
+
+        class Cadeira{
+            constructor(qtdePernas, giratoria, cor){
+                this.qtdePernas=qtdePernas
+                this.giratoria=giratoria
+                this.cor=cor
+            }
+
+            girarCadeira(){
+                if(this.girarCadeira===true){
+                    console.log('girou')
+                }else{
+                    console.log('cadeira n é giratória')
+                }
+            }
+        }
+
+       
+
+        let cadeiras = Array()
+        cadeiras.push(new Cadeira(4,false,'rosa'))
+        cadeiras.push(new Cadeira(1,true,'verde'))
+        
+        console.log(cadeiras)
+
+
+        class Sofa{
+            constructor(cor,quantidadeLugar,reclinavel){
+                this.cor=cor
+                this.quantidadeLugar=quantidadeLugar
+                this.reclinavel=reclinavel
+            }
+
+            reclinar(){
+                if(this.reclinavel===true){
+                    console.log('reclinou')
+                }else{
+                    console.log('não é reclinavel')
+                }
+            }
+        }
+
+        let sofa= new Sofa('vermelho',3,true)
+        sofa.reclinar()
+        
+        
+
+
+
+    </script>
+
+
+</body>
+</html>

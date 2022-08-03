@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //destructuring desestrutura/remove valores
+
+        let frutas =['Abacaxi','pera','uva','mamao']
+        
+        let [a,b,,c,d='banana'] = frutas
+
+        console.log(a,b,c,d)
+
+        let coisas=[['Abacaxi','pera','uva','mamao'],['josé','maria']]
+        let[[,pera],[,maria]]=coisas
+
+        console.log(pera,maria)
+
+
+
+        let produto ={
+            descricao:'notebook',
+            preco:1800,
+            detalhes:{
+                fabricante:'abc',
+                modelo:'xyz'
+            }
+        }
+
+        let{descricao,preco} = produto
+
+        console.log(descricao,preco)
+
+        let{descricao:x,preco:p} = produto
+
+        console.log(x,p)
+
+        let {detalhes: {fabricante:f,modelo:m}} =produto
+
+        console.log(f,m)
+
+
+        let arr = [10,20,30,40]
+
+        function teste([a,b, ,c,d=50]){
+            console.log(a,b,c,d)
+        }
+
+        teste(arr)
+
+        let obj={
+            a:10,
+            b:20,
+            c:30,
+            d:40
+        }
+
+        function test({a:a,b:b}){
+            console.log(a,b)
+        }
+
+        test(obj)
+
+
+        let [y,...resto]=arr
+
+        console.log(y,resto)
+
+
+        let obj1={
+            a:10,
+            b:20,
+            c:30,
+            d:40
+        }
+
+
+        let {a:a1,...z}=obj
+
+        console.log(a1,z)
+
+        //array []
+        //objetos {}
+
+
+    </script>
+
+
+</body>
+</html>

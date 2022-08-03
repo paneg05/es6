@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //aviao
+        //atibutos cor e modelo
+        //metodo levantar voo
+
+
+        //objeto literal
+        let a1 = {
+            cor:'branco',
+            modelo:'A320',
+            levantarVoo:function(){
+                console.log('caiu')
+            }
+        }
+
+        //função contrstrutora
+        let AviaoF=function(){
+            this.cor='azul'
+            this.modelo='787'
+            this.levantarVoo = function(){
+                console.log('caiu')
+            }
+        }
+
+        let a2=new AviaoF()
+
+        //classe
+        class aviaoc{
+            constructor(){
+                this.cor='vermelho'
+                this.modelo='E-jets'
+
+            }
+            levantarVoo(){
+                console.log('caiu')
+            }
+        }
+
+        let a3 = new aviaoc()
+        console.log(a1)
+        console.log(a2)
+        console.log(a3)
+
+        
+
+
+    </script>
+
+
+</body>
+</html>
